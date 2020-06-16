@@ -1,0 +1,138 @@
+body{
+	padding: 0;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, td{
+	font-family: Arial;
+}
+
+a{
+	color: black;
+	text-decoration: none;
+}
+
+ul{
+	list-style: none;
+	padding: 0;
+}
+
+li:hover{
+	background-color: #03a9f4;
+}
+
+ul .sublist{
+	margin-left: 25px;
+}
+
+.sidebar .active{
+	background-color:  #03a9f4;
+}
+
+
+.container{
+	width: 80%;
+	margin: auto;
+}
+
+.header{	
+	
+	box-shadow:0px 1px 10px grey;
+	top: 0;
+	position: fixed;
+	width: 100%;
+	background-color: #03a9f4;
+	color: white;
+	z-index: 1;
+	padding: 15px;
+
+}
+
+.header .title{
+	float: left;
+}
+
+.header .title h1{
+	margin: 0;
+	padding: 0;
+}
+
+.logout {
+	font-size: 25px;
+	float: right;
+	cursor: pointer;
+			
+}
+
+.logout i {
+	color: white;
+}
+
+.logout i:hover{
+	color: grey;
+}
+
+
+.sidebar{
+	background-color: #e0e0e0;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	min-width: 300px;
+	max-width: 300px;
+	overflow-y: scroll;
+	z-index: 0;
+	padding: 10px;
+	padding-top: 60px;	
+	overflow-x: wrap;		
+}
+
+.sidebar h1, h2, h3{
+	color: #37474f;
+}
+
+
+.register-attendee{
+	margin-top: 100px;
+	margin-left: 300px;		
+}
+
+.register-attendee-container{
+	width: 40%;
+	margin: auto;	
+	text-align: left;
+	background-color: #e0e0e0;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.register-attendee-form{
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+	padding: 20px;
+}
+
+input, select{
+	width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit]{
+	width: 100%;
+	 padding: 14px 20px;
+	 cursor: pointer;
+	 background-color: #039be5;
+	 color: white;
+	 border-radius: 4px;
+	 border:none;
+
+}
+
+input[type=submit]:hover {
+    background-color: grey;
+}
