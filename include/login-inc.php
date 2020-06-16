@@ -25,6 +25,7 @@ if (isset($_POST['submit'])) {
 					//login the user here
 					$_SESSION['u_id'] = $row['user_id'];
 					$_SESSION['email'] = $row['user_name'];
+					$_SESSION['name'] = $row['name'];
 
 					header("Location: ../events.php");
 					exit();

@@ -10,7 +10,7 @@
 </div>
 
 <div class="sidebar">
-	<h1>Welcome, John Doe!</h1>
+	<h1>Welcome, <?php echo $_SESSION['name']; ?>!</h1>
 	<hr>
 	<ul>
 		<li <?php if(basename($_SERVER['PHP_SELF']) == 'events.php') { echo 'class="active"';} ?>><a href="events.php"><h3>Event List</h3></a></li>
