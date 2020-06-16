@@ -10,29 +10,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login</title>
+	<title>EveMaSys - Event Management System</title>
 	<link rel="stylesheet" type="text/css" href="src/style.css">
 </head>
 <body>
 	<div class="container">
-		<h1>Event Management System</h1>
-		<div class="login-container">
-							
-			<div class="login-form">
+		<div class="text-center" style="margin: 2.5rem 0;">
+			<h1 class="font-cursive" style="font-size: 3rem; margin: 0">EveMaSys</h1>
+			<small style="color: rgba(0,0,0,.25)">Event Management System</small>
+		</div>
+		
+		<div class="card">
+			<div class="form-group">
 				<form method="POST" action="include/login-inc.php">
-					<p>
-						<label><strong>E-mail</strong><br></label>
-						<input type="email" name="email" autofocus="on" autocomplete="on">
-					</p>
-					<p>
-						<label><strong>Password</strong><br></label>
-						<input type="password" name="password">
-					</p>
-					<input type="submit" name="submit" value="Login">				
+					<div class="form-item">
+						<label>E-mail</label>
+						<input type="email" name="email" placeholder="E-mail" autofocus="on" autocomplete="on">
+					</div>
+					<div class="form-item">
+						<label>Password</label>
+						<input type="password" name="password" placeholder="Password">
+					</div>
+					<div class="form-item">
+						<input type="submit" name="submit" value="Login">
+					</div>			
 				</form>
 			</div>
 
-			No account? <a href="register.php">Register</a>
+			<div class="text-center">
+				<small>No account? <a href="register.php">Register</a></small>
+			</div>
 		</div>
 	</div>
 

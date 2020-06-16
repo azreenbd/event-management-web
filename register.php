@@ -10,32 +10,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Register</title>
+	<title>Register | EveMaSys - Event Management System</title>
 	<link rel="stylesheet" type="text/css" href="src/style.css">
 </head>
 <body>
 	<div class="container">
-		<h1>Event Management System</h1>
-		<div class="login-container">
-							
-			<div class="login-form">
+		<h1 class="text-center">Register</h1>
+		<div class="card">
+			<div class="form-group">
 				<form method="POST" action="include/register_user-inc.php">
-					<p>
-						<label><strong>E-mail</strong><br></label>
-						<input type="email" name="email" autofocus="on" autocomplete="on">
-					</p>
-					<p>
-						<label><strong>Name</strong><br></label>
-						<input type="text" name="name" autocomplete="on">
-					</p>
-					<p>
-						<label><strong>Password</strong><br></label>
-						<input type="password" name="password">
-					</p>
-					<input type="submit" name="submit" value="Register">				
+					<div class="form-item">
+						<label>E-mail</label>
+						<input type="email" name="email" placeholder="E-mail" autofocus="on" autocomplete="on">
+					</div>
+					<div class="form-item">
+						<label>Name</label>
+						<input type="text" name="name" placeholder="Name" autocomplete="on">
+					</div>
+					<div class="form-item">
+						<label>Password</label>
+						<input type="password" name="password" placeholder="Password">
+					</div>
+					<div class="form-item">
+						<input type="submit" name="submit" value="Register">
+					</div>			
 				</form>
 			</div>
-			Already have an account? <a href="index.php">Login</a>
+			<div class="text-center">
+			<small>Already have an account? <a href="index.php">Login</a></small>
+			</div>
 		</div>
 	</div>
 

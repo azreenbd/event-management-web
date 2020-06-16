@@ -12,19 +12,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Events</title>
-	<link rel="stylesheet" type="text/css" href="src/events.css">
+	<title>Events | EveMaSys - Event Management System</title>
+	<link rel="stylesheet" type="text/css" href="src/style.css">
+	<!--<link rel="stylesheet" type="text/css" href="src/events.css">-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 <body>
 	<?php include 'include/header-nav.php'; ?>
 
-	<div class="event-container">
+	<div class="container">
 		<h1>Upcoming Events</h1>
 		<p>Click on an event for details.</p>
 		<hr>
 		<div class="event-list">
-
 			<?php
  				$u_id = $_SESSION['u_id'];
 
@@ -42,28 +42,20 @@
 
 					foreach ($eventDatas as $eventData) {
 						echo '
-						<div class="event" onclick="window.location.href = \'event-detail.php?id='.$eventData[0].'\'">
-							<table>
-								<theader>
+						<div class="card event" onclick="window.location.href = \'event-detail.php?id='.$eventData[0].'\'">
+							<div class="top"><h1>'.$eventData[1].'</h1></div>
+							<div class="bottom">
+								<table>
 									<tr>
-										<th colspan="4"><h1>'.$eventData[1].'</h1></th>
-									</tr>
-								</theader>
-								<tbody>
-									<tr>
-										<td align="right"><i class="far fa-calendar-alt"></i></td>
-										<td id="date" align="center">'.$eventData[2].'</td>
-										<td align="right"><i class="far fa-clock"></i></td>
-										<td id="time" align="center">'.$eventData[3].'</td>
+										<td id="date" align="center"><i class="far fa-calendar-alt"></i> '.$eventData[2].'</td>
+										<td id="time" align="center"><i class="far fa-clock"></i> '.$eventData[3].'</td>
 									</tr>
 									<tr>
-										<td align="right"><i class="fas fa-map-marker-alt"></i></td>
-										<td id="venue" align="center">'.$eventData[4].'</td>
-										<td align="right"><i class="fas fa-users"></i></td>
-										<td id="attendees" align="center">'.$eventData[5].'</td>
+										<td id="venue" align="center"><i class="fas fa-map-marker-alt"></i> '.$eventData[4].'</td>
+										<td id="attendees" align="center"><i class="fas fa-users"></i> '.$eventData[5].'</td>
 									</tr>
-								</tbody>
-							</table>
+								</table>
+							</div>
 						</div>
 						';
 					}

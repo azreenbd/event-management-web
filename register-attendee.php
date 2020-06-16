@@ -12,20 +12,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Events</title>
-	<link rel="stylesheet" type="text/css" href="src/register-attendee.css">
+	<title>Register Attendee | EveMaSys - Event Management System</title>
+	<link rel="stylesheet" type="text/css" href="src/style.css">
+	<!--<link rel="stylesheet" type="text/css" href="src/register-attendee.css">-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	
 </head>
 <body>
 	<?php include 'include/header-nav.php'; ?>
 
-	<div class="register-attendee">
-		<div class="register-attendee-container">
-			<div class="register-attendee-form">
+	<div class="container">
+		<h1 class="text-center">Register Attendee</h1>
+		<div class="card">
+			<div class="form-group">
 				<form method="POST" action="include/register_attendee-inc.php">
-					<p>
-						<label><strong>Event: </strong></label>
+					<div class="form-item">
+						<label>Event</label>
 						<select name="event">
 							<option disabled selected hidden>Select an event</option>
 							<?php
@@ -46,23 +48,23 @@
 								}
 							?>
 						</select>
-					</p>
-					<p>
-						<label><strong>Name:</strong></label>
+					</div>
+					<div class="form-item">
+						<label>Name</label>
 						<input type="text" name="attendee-name" placeholder="John Doe">
-					</p>
-					<p>
-						<label><strong>NRIC: </strong></label>
-						<input type="text" name="attendee-nric" pattern="\d{6}-\d{2}-\d{4}" placeholder="971107-56-5397">
-					</p>
-					<p>
-						<label><strong>Phone no:</strong></label>
-						<input type="text" name="attendee-phone" pattern="\d{3}{6}" placeholder="018-2702829">
-					</p>
-					<p>
-						<label><strong>E-Mail:</strong></label>
+					</div>
+					<div class="form-item">
+						<label>NRIC</label>
+						<input type="text" name="attendee-nric" pattern="\d{6}-\d{2}-\d{4}" placeholder="XXXXXX-XX-XXXX">
+					</div>
+					<div class="form-item">
+						<label>Phone no</label>
+						<input type="text" name="attendee-phone" pattern="\d{3}{6}" placeholder="012-3456789">
+					</div>
+					<div class="form-item">
+						<label>E-Mail</label>
 						<input type="email" name="attendee-email" placeholder="johndoe@gmail.com">
-					</p>
+					</div>
 					<input type="submit" name="submit" value="Register">
 				</form>
 			</div>

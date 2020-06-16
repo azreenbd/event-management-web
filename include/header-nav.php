@@ -1,14 +1,26 @@
-<div class="header">
+<header>
 	<div class="container">
-		<div class="title">
-			<h1>Event Management System</h1>
+		<div class="left-item">
+			<div class="title font-cursive">
+				<a href="events.php">EveMaSys</a>
+			</div>
 		</div>
-		<div class="logout">
-			<a href="include/logout-inc.php" title="Log Out"><i class="fas fa-sign-out-alt"></i></a>
+		<div class="right-item">
+			<nav>
+				<ul>
+					<li <?php if(basename($_SERVER['PHP_SELF']) == 'events.php') { echo 'class="active"';} ?>><a href="events.php">Events</a></li>
+					<li <?php if(basename($_SERVER['PHP_SELF']) == 'register-event.php') { echo 'class="active"';} ?>><a href="register-event.php">Create Event</a></li>
+					<li <?php if(basename($_SERVER['PHP_SELF']) == 'register-committee.php') { echo 'class="active"';} ?>><a href="register-committee.php">Add Committee</a></li>
+					<li <?php if(basename($_SERVER['PHP_SELF']) == 'register-attendee.php') { echo 'class="active"';} ?>><a href="register-attendee.php">Register Attendee</a></li>	
+					<li><a href="include/logout-inc.php" title="Log Out"><i class="fas fa-sign-out-alt"></i></a></li>			
+				</ul>
+			</nav>
+			
 		</div>	
 	</div>	
-</div>
+</header>
 
+<!--
 <div class="sidebar">
 	<h1>Welcome, <?php echo $_SESSION['name']; ?>!</h1>
 	<hr>
@@ -19,3 +31,4 @@
 		<li <?php if(basename($_SERVER['PHP_SELF']) == 'register-attendee.php') { echo 'class="active"';} ?>><a href="register-attendee.php"><h3>Register Attendee</h3></a></li>						
 	</ul>		
 </div>
+-->

@@ -13,49 +13,53 @@
 <html>
 <head>
 	<title>Events</title>
-	<link rel="stylesheet" type="text/css" href="src/register-event.css">
+	<link rel="stylesheet" type="text/css" href="src/style.css">
+	<!--link rel="stylesheet" type="text/css" href="src/register-event.css">-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	
 </head>
 <body>
 	<?php include 'include/header-nav.php'; ?>
 
-	<div class="create-event">
-		<div class="create-event-container">
-			<div class="create-event-form">
+	<div class="container">
+		<h1 class="text-center">Create an Event</h1>
+		<div class="card">
+			<div class="form-group">
 				<form method="POST" action="include/register_event-inc.php">
-					<p>
-						<label><strong>Event Name:</strong></label><br>
+					<div class="form-item">
+						<label>Event name</label><br>
 						<input type="text" name="event-name" placeholder="Workshop/ Competition/ Talk" required="on">					
-					</p>
-					<p>
-						<label><strong>Event Date: </strong></label><br>
+					</div>
+					<div class="form-item">
+						<label>Event date</label><br>
 						<input type="date" name="event-date" required="on">					
-					</p>
-					<p>
-						<label><strong>Event Time: </strong></label><br>
+					</div>
+					<div class="form-item">
+						<label>Event time</label><br>
 						<input type="time" name="event-time" required="on">					
-					</p>
-					<p>
-						<label><strong>Venue: </strong></label><br>
+					</div>
+					<div class="form-item">
+						<label>Venue</label><br>
 						<input type="text" name="event-venue" placeholder="MMU Cyberjaya..." required="on">
-					</p>
-					<p>
-						<label><strong>Maximum Number of Attendees: </strong></label><br>
+					</div>
+					<div class="form-item">
+						<label>Maximum number of attendees</label><br>
 						<input type="number" name="event-quota" min="1" max="500" step="1" placeholder="Limited to 500 attendees." required="on">					
-					</p>
-					<p>
-						<label><strong>Description: </strong></label><br>
+					</div>
+					<div class="form-item">
+						<label>Description</label><br>
 						<textarea name="event-description" placeholder="The event is about....." required="on"></textarea>					
-					</p>
+					</div>
 					<div id="tentative">
 						<p>
-							<label><strong>Add Tentative: </strong></label><br>
-							<input type="time" name="agenda-time-0"> <br>
-							<textarea name="agenda-description-0" placeholder="What is happening now?"></textarea>					
+							<label>Add tentative</label><br>
+							<input type="time" name="agenda-time-0" style="margin-bottom: .25rem"><br>
+							<textarea name="agenda-description-0" placeholder="What is happening at this time?"></textarea>					
 						</p>
 					</div>
-					<input type="button" name="" value="Add More Agenda(s)" onclick="addAgenda()">
+					<div class="form-item">
+						<input type="button" name="" value="Add More Agenda(s)" onclick="addAgenda()">
+					</div>
 					<input type="submit" name="submit" value="Register">
 				
 				</form>
@@ -70,8 +74,9 @@
 			var time = document.createElement("input"); 
 			var wrapper = document.createElement("p");           
             agenda.name = "agenda-description-" + count;
-            agenda.placeholder = "What is happening now?"
+            agenda.placeholder = "What is happening at this time?"
             time.type = "time";
+            time.style = "margin-bottom: .25rem";
             time.name = "agenda-time-" + count;
             wrapper.appendChild(time);
             wrapper.appendChild(agenda);
