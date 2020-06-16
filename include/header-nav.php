@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="left-item">
 			<div class="title font-cursive">
-				<a href="events.php">EveMaSys</a>
+				<a href="events.php">Evema<span style="color: #ff5c62">Sys</span></a>
 			</div>
 		</div>
 		<div class="right-item">

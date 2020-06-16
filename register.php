@@ -13,9 +13,14 @@
 	<title>Register | EveMaSys - Event Management System</title>
 	<link rel="stylesheet" type="text/css" href="src/style.css">
 </head>
-<body>
+<body class="bg">
 	<div class="container">
-		<h1 class="text-center">Register</h1>
+		<div class="text-center" style="margin: 2.5rem 0;">
+			<h1 class="font-cursive" style="font-size: 3rem; margin: 0; color: #fff; text-shadow: 0 .125rem .125rem rgba(0,0,0,.25)">
+				Evema<span style="color: #ff5c62">Sys</span>
+			</h1>
+			<small style="color: rgba(255,255,255,.5)">Event Management System</small>
+		</div>
 		<div class="card">
 			<div class="form-group">
 				<form method="POST" action="include/register_user-inc.php">
