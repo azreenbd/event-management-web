@@ -15,7 +15,7 @@
 </head>
 <body class="bg">
 	<div class="container">
-		<div class="text-center" style="margin: 2.5rem 0;">
+		<div class="text-center" style="padding: 2.5rem 0;">
 			<h1 class="font-cursive" style="font-size: 3rem; margin: 0; color: #fff; text-shadow: 0 .125rem .125rem rgba(0,0,0,.25)">
 				Evema<span style="color: #ff5c62">Sys</span>
 			</h1>
@@ -44,6 +44,9 @@
 			</div>
 		</div>
 	</div>
-
+	<footer class="footer-light text-shadow">
+		<?php include 'include/footer.php'; ?>
+	</footer>
+	
 </body>
 </html>

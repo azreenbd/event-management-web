@@ -9,10 +9,7 @@
 			<nav>
 				<ul>
 					<li <?php if(basename($_SERVER['PHP_SELF']) == 'events.php') { echo 'class="active"';} ?>><a href="events.php">Events</a></li>
-					<li <?php if(basename($_SERVER['PHP_SELF']) == 'register-event.php') { echo 'class="active"';} ?>><a href="register-event.php">Create Event</a></li>
-					<li <?php if(basename($_SERVER['PHP_SELF']) == 'register-committee.php') { echo 'class="active"';} ?>><a href="register-committee.php">Add Committee</a></li>
-					<li <?php if(basename($_SERVER['PHP_SELF']) == 'register-attendee.php') { echo 'class="active"';} ?>><a href="register-attendee.php">Register Attendee</a></li>	
-					<li><a href="include/logout-inc.php" title="Log Out"><i class="fas fa-sign-out-alt"></i></a></li>			
+					<li><a href="include/logout-inc.php" title="Log Out">Logout <i class="fas fa-sign-out-alt"></i></a></li>			
 				</ul>
 			</nav>
 			
