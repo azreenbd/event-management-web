@@ -76,21 +76,28 @@
 						<h1>'.$eventData[1].'</h1>
 						<p>'.$eventData[6].'</p>
 						<div class="panel">
-						
-						<p><i class="far fa-clock"></i> '.date("d M, Y", strtotime($eventData[2])).' at '
-						.date("g:ia", strtotime($eventData[3])).'</p>
+							<div>
+								<p><i class="far fa-clock"></i> '.date("d M, Y", strtotime($eventData[2])).' at '
+								.date("g:ia", strtotime($eventData[3])).'</p>
 
-						<p>
-						<i class="fas fa-map-marker-alt"></i> 
-						'.$eventData[4].'
-						</p>
+								<p>
+								<i class="fas fa-map-marker-alt"></i> 
+								'.$eventData[4].'
+								</p>
 
-						<p>
-						<i class="fas fa-users"></i> 
-						'.$eventData[5].' possible attendees
-						</p>
+								<p>
+								<i class="fas fa-users"></i> 
+								'.$eventData[5].' possible attendees
+								</p>
+							</div>
 
-						<h1>Agenda</h1>';
+							<div class="shortcut-bar">
+								<a href="#agenda" title="Agenda"><i class="fas fa-list-alt"></i></a>
+								<a href="#committee" title="Committee"><i class="fas fa-hands-helping"></i></a>
+								<a href="#attendees" title="Attendees"><i class="fas fa-users"></i></a>
+							</div>
+
+							<h1 id="agenda"><i class="fas fa-list-alt"></i> Agenda</h1>';
 
 						//Agenda or tentative table
 
@@ -100,36 +107,20 @@
 						$tentativeDatas = array();
 
 						if ($totalTentative < 1) {
-							echo '<table><tr><td>No agenda provided.</td></tr></table>';
+							echo '<p>No agenda provided.</p>';
 						} else {
 							while($row = mysqli_fetch_row($result)) { //put table result in 2D array
 								$tentativeDatas[] = $row;
 							}
 
-							echo '
-								<table id="agenda">
-									<thead>
-										<tr>
-											<th>Time</th>
-											<th>Agenda</th>
-										</tr>
-									</thead>
-									<tbody>
-							';
-
 							foreach ($tentativeDatas as $tentativeData) {
 								echo '
-										<tr>
-											<td>'.date("g:ia", strtotime($tentativeData[1])).'</td>
-											<td>'.$tentativeData[2].'</td>
-										</tr>
+									<div class="agenda">
+										<h3>'.date("g:ia", strtotime($tentativeData[1])).'</h2>
+										<p>'.$tentativeData[2].'</p>
+									</div>
 								';
 							}
-
-							echo '
-								</tbody>
-							</table>
-							';
 						}
 
 						//Committee Members table
@@ -139,7 +130,7 @@
 						$committeeDatas = array();
 
 						echo '
-							<h1>Committee Members</h1>
+							<h1 id="committee"><i class="fas fa-hands-helping"></i> Committee Members</h1>
 						';
 
 						if ($totalCommittee < 1) {
@@ -150,7 +141,7 @@
 							}
 
 							echo '
-								<table id="committee-members">
+								<table id="committee-members" class="table-style">
 									<thead>
 										<tr>
 											<th>Name</th>
@@ -187,19 +178,19 @@
 						$attendeeDatas = array();
 
 						echo '
-							<h1>Attendees</h1>
+							<h1 id="attendees"><i class="fas fa-users"></i> Attendees</h1>
 						';
 
 						//get tentative
 						if ($totalAttendee < 1) {
 							echo '<table><tr><td>No attendee available.</td></tr></table>';
-						} else {
+							} else {
 							while($row = mysqli_fetch_row($result)) { //put table result in 2D array
 								$attendeeDatas[] = $row;
 							}
 
 							echo '
-								<table id="attendees">
+								<table id="attendees" class="table-style">
 									<thead>
 										<tr>
 											<th>Name</th>

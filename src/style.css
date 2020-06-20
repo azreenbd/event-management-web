@@ -118,6 +118,52 @@ input[type=submit]:hover, .btn:hover {
 	padding: .5rem 0;
 }
 
+/* table */
+.table-style {
+	width: 100%;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+table tr:first-child td:first-child {
+    border-top-left-radius: .5rem;
+}
+
+table tr:first-child td:last-child {
+    border-top-right-radius: .5rem;
+}
+
+table tr:last-child td:first-child {
+    border-bottom-left-radius: .5rem;
+}
+
+table tr:last-child td:last-child {
+    border-bottom-right-radius: .5rem;
+}
+
+
+.table-style, .table-style td {
+	padding: .8rem 1rem;
+}
+
+.table-style th {
+	text-align: left;
+	padding: .25rem 1rem;
+	color: #ff5c62;
+}
+
+.table-style tbody {
+	background-color: #fafafa;
+}
+
+.table-style tbody tr {
+	transition: background-color .25s;
+}
+
+.table-style tbody tr:hover {
+	background-color: #efefef;
+}
+
 /* navbar */
 header {
 	background-color: #fff;
@@ -273,10 +319,33 @@ footer {
 	margin-top: auto;
 }
  
+/* Tentative/Agenda */
 
+.agenda {
+	background-color: #fafafa;
+	padding: 0 1rem;
+	margin: .5rem 0;
+	border-radius: 1rem;
+	border: 1px solid #fff;
+	overflow: hidden;
+	display: block;
 
+	transition: padding .25s;
+}
 
+.agenda:hover {
+	padding: .5rem 1rem;
+	background-image: linear-gradient(225deg, #ec785b, #a258a7);
+	box-shadow: 0 15px 25px rgba(0,0,0,.25);
+	border-color: #ffa3a6;
+	color: white;
+	
+}
 
+.shortcut-bar {
+	border-top: 1px solid #efefef;
+	padding: .8rem 0;
+}
 
 
 
